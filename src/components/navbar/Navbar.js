@@ -4,11 +4,11 @@ import Message from "./dumbs/Message.js";
 import Score from "./dumbs/Score.js";
 
 class Navbar extends Component {
-    state = {
-        score:0,
-        topScore: localStorage.getItem("topScore")||0,
-        message:"Working?!"
-    };
+
+    componentDidMount(){
+        this.setState(this.props.state)
+    }
+
     render() {
         return (
             <div className="navbar navbar-expand-lg navbar-light bg-light">
@@ -17,10 +17,10 @@ class Navbar extends Component {
                         <Title />
                     </div>
                     <div className="col-4 text-center">
-                        <Message message = {this.state.message}/>
+                        <Message message = {this.props.message}/>
                     </div>
                     <div className="col-4 text-right">
-                        <Score score={this.state.score} topScore = {this.state.topScore}  />
+                        <Score score={this.props.score} topScore = {this.props.topScore}  />
                     </div>
                 </div>
             </div>
