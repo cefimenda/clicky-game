@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from "./components/navbar";
 import Info from "./components/info/Info";
-// import Game from "./components/game";
+import Game from "./components/game";
 
 class App extends Component {
   render() {
@@ -11,7 +11,7 @@ class App extends Component {
       <div>
         <Navbar />
         <Info />
-        {/* <Game /> */}
+        <Game />
       </div>
     );
   }
