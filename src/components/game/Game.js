@@ -15,6 +15,7 @@ import Tormund from "../images/Tormund.png"
 import Tyrion from "../images/Tyrion.jpg"
 import Varys from "../images/Varys.png"
 
+import Walkers from "../images/walkers.jpg"
 
 
 class Game extends Component {
@@ -50,7 +51,7 @@ class Game extends Component {
         let selected = event.target.getAttribute("src");
 
         if (this.state.clicked.includes(selected)) {
-            await this.setState({clicked:[]})
+            await this.setState({ clicked: [] })
             this.props.score("Wrong")
         }
         else {
@@ -64,7 +65,9 @@ class Game extends Component {
     };
     render() {
         return (
-            <div>
+            <div style={{
+                backgroundImage: `url(${Walkers})`, backgroundSize: 'cover',
+            }}>
                 <div className="container text-center">
                     <div className="row text-center">
                         {this.state.cards.map((card, i) => <Card imgLink={card} key={i} onClick={this.handleCardSelect} />)}

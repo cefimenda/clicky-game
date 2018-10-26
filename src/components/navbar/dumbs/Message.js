@@ -1,7 +1,7 @@
 import React from "react";
 
 const Message = props =>(
-    <p className="">{props.message}</p>
+    <h4 className="text-light">{props.message}</h4>
 );
 
 export default Message

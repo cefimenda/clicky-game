@@ -5,13 +5,9 @@ import Score from "./dumbs/Score.js";
 
 class Navbar extends Component {
 
-    componentDidMount(){
-        this.setState(this.props.state)
-    }
-
     render() {
         return (
-            <div className="navbar navbar-expand-lg navbar-light bg-light">
+            <div className="navbar fixed-top navbar-expand-lg navbar-dark border-bottom border-light p-3" style={{zIndex:2, background:'#792427'}}>
                 <div className="row w-100">
                     <div className="col-4 text-left">
                         <Title />
