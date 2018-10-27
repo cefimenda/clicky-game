@@ -69,7 +69,7 @@ class Game extends Component {
                 backgroundImage: `url(${Walkers})`, backgroundSize: 'cover',
             }}>
                 <div className="container text-center">
-                    <div className="row text-center">
+                    <div className="row w-75 m-auto text-center">
                         {this.state.cards.map((card, i) => <Card imgLink={card} key={i} onClick={this.handleCardSelect} />)}
                     </div>
                 </div>
